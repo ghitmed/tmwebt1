@@ -1,6 +1,9 @@
 package com.tmwebt1.model;
 
 import jakarta.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
 
 @Entity(name = "TELEMED_USER")
 public class User {
@@ -8,11 +11,12 @@ public class User {
     int type = 0;
     @Id
     @GeneratedValue()
-
     Long id;
     private String mbo;
     private String firstName;
     private String lastName;
+  //  @DateTimeFormat(pattern = "dd-MM-yyyy")
+  //  private Date birthDate;
     private String phone;
     private String email;
     private String password;
@@ -29,10 +33,20 @@ public class User {
         this.email = email;
     }
 
+
+
     public User(String email, String password) {
         this.email = email;
         this.password = password;
     }
+
+   /* public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }*/
 
     public int getType () {
         return type;

@@ -62,13 +62,13 @@ h1, h2, h5 {
                                     type="number" name="mbo" id="mbo"
                                     minlength="9" maxlength="9" required
                                     class="form-control"
-                                    placeholder="Unesite MBO 9 znamenaka"/>
+                                    placeholder="Unesite točno 9 znamenaka za MBO"/>
                         </div>
                         <br>
                         <div class="form-group">
                             <label> Ime </label>
                             <input
-                                    type="text" name="fName" id="fname"
+                                    type="text" name="fname" id="fname"
                                     maxlength="70" required
                                     class="form-control"
                                     placeholder="Unesite ime max. 70 znakova"/>
@@ -77,19 +77,27 @@ h1, h2, h5 {
                         <div class="form-group">
                             <label> Prezime </label>
                             <input
-                                    type="text" name="lName" id="lname"
+                                    type="text" name="lname" id="lname"
                                     maxlength="70" required
                                     class="form-control"
                                     placeholder="Unesite prezime max. 70 znakova"/>
                         </div>
                         <br>
+                     <!--   <div class="form-group">
+                            <label> Datum </label>
+                            <input  th:field="${user.birthDate}"
+                                    type="date"  name="birthDate" id="birthDate" required
+                                    class="form-control"
+                                    placeholder="Unesite datum rođenja"/>
+                        </div>
+                        <br>-->
                         <div class="form-group">
                             <label> Mobitel / Telefon </label>
                             <input
                                     type="phone" name="phone" id="phone"
-                                    maxlength="22" required
+                                    minlength="6" maxlength="22" required
                                     class="form-control"
-                                    placeholder="Unesite broj max. 22 znamenke"/>
+                                    placeholder="Unesite broj min. 6. max. 22 znamenke"/>
                         </div>
                         <br>
                         <div class="form-group">
@@ -105,11 +113,10 @@ h1, h2, h5 {
                             <label> Zaporka </label>
                             <input
                                     type="password" name="password" id="password"
-                                    maxlength="30" required
+                                    minlength="5" maxlength="30" required
                                     class="form-control"
-                                    placeholder="Unesite zaporku max. 35 znakova"/>
+                                    placeholder="Unesite zaporku min. 5 do max. 35 znakova"/>
                         </div>
-
                         <br>
                         <div class="box-footer">
                             <button type="submit" class="btn btn-secondary btn-lg">Spremi <i

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <title>Telemed</title>
     <meta charset="utf-8">
@@ -55,17 +55,18 @@
                 <form action="loginProcess">
                     <h5>PRIJAVA, DOBRODOŠLI</h5>
                     <br>
-                    <div class="form-floating">
+                    <div class="form-floating p-1">
                         <input type="text" class="form-control" id="email" name="email" placeholder="name@example.com">
                         <label for="email">Email adresa</label>
                     </div>
                     <br>
-                    <div class="form-floating">
+                    <div class="form-floating p-1">
                         <input type="password" class="form-control" id="password" name="password" required
                                placeholder="Password">
+                        <br>
+                        <div th:text="${userMessage ?: ''}"></div>
                         <label for="password">Zaporka</label>
                     </div>
-                    <br>
                     <br>
                     <div class="d-grid">
                         <button type="submit" class="btn btn-secondary btn-lg">Prijava</button>
@@ -76,9 +77,9 @@
             </div>
         </div>
         <div class="col-md-6 my-4">
-            <div class="h-100 p-4 bg-light border rounded-4">
+           <div class="h-100 p-4 bg-light border rounded-4">
                 <div class="row">
-                    <div class="col-sm-6 p-4">
+                   <!-- <div class="col-sm-6 p-4">
                         <div class="card">
                             <div class="card-body">
 
@@ -88,9 +89,8 @@
                     <div class="col-sm-6 p-4">
                         <div class="card">
                             <div class="card-body">
-
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>

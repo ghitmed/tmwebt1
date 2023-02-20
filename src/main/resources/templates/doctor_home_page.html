@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
@@ -46,8 +53,6 @@ h1, h2, h5 {
 </style>
 <!--white-space: nowrap;-->
 <body>
-
-
 <div class="container">
     <div>
         <header class="m-4 border-bottom">
@@ -73,8 +78,6 @@ h1, h2, h5 {
         <div class="col-md-4">
             <div class="h-100 p-4 bg-light border rounded-4">
                 <div class="row">
-
-
                 </div>
             </div>
         </div>
@@ -98,8 +101,9 @@ h1, h2, h5 {
                         <td th:text="${user.mbo}"></td>
                         <td th:text="${user.firstName}"></td>
                         <td th:text="${user.lastName}"></td>
+                        <!--<th th:text="${#dates.format(user.birthDate, 'dd.MM.yyyy')}"></th>-->
                         <td th:text="${user.phone}"></td>
-                        <td th:text="${user.email}"></td> <!--class="hidden-xs hidden-sm"-->>
+                        <td th:text="${user.email}"></td> <!--class="hidden-xs hidden-sm"-->
                         <td th:text="${user.password}"></td> <!--class="hidden-xs hidden-sm" -->
                         <td><a th:href="@{'/showRecordsForUser?userId=' + ${user.id}}"
                                class="btn btn-secondary btn-lg"> Prikaži <i class="bi bi-person-lines-fill"></i></a>
