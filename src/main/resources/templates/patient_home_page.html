@@ -36,8 +36,6 @@ h1, h2, h5 {
         table-layout: fixed;
         word-wrap: break-word;
     }
-
-
 </style>
 <body>
 <div class="container">
@@ -102,13 +100,12 @@ h1, h2, h5 {
                                     style="height: 100px"
                                     placeholder="Kako se osjećate "></textarea>
                         </div>
-                        <span style="text-align:inherit;"
-                              th:text="${currUser.firstName} + ' ' + ${currUser.lastName}"></span>
+                        <span th:text="${currUser.firstName} + ' ' + ${currUser.lastName}"></span>
                         </center>
                     </div>
                     <br>
                     <div class="box-footer">
-                        <button type="submit" class="btn btn-secondary btn-lg">Spremi <i
+                        <button class="btn btn-secondary btn-lg">Spremi <i
                                 class="bi bi-person-plus"></i></button>
                     </div>
                 </form>
