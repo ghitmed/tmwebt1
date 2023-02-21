@@ -23,7 +23,7 @@ public class ControllerTelemed {
     // PATIENT METHODS
 
     @GetMapping("/records")
-    public String showRecords(long userId, Model model) {
+    public String showRecords(Long userId, Model model) {
         User currUser = userRepository.findById(userId).get();
         model.addAttribute("currUser", currUser);
         model.addAttribute(recordRepository.findByUser(currUser));
@@ -32,7 +32,7 @@ public class ControllerTelemed {
     }
 
     @GetMapping("/addNewRecord")
-    public String addNewRecord(long userId, int systolic, int diastolic, int heartBR, String status) {
+    public String addNewRecord(Long userId, int systolic, int diastolic, int heartBR, String status) {
         User currUser = userRepository.findById(userId).get();
         RecordTelemed newRecordTelemed = new RecordTelemed(new Date(), systolic, diastolic, heartBR, status);
         newRecordTelemed.setUser(currUser);
@@ -42,7 +42,7 @@ public class ControllerTelemed {
     }
 
     @GetMapping("/redirectToUserForm")
-    public String redirectToCreateRecord(long userId, Model model) {
+    public String redirectToCreateRecord(Long userId, Model model) {
         User currUser = userRepository.findById(userId).get();
         model.addAttribute("currUser", currUser);
         return "patient_home_page.html";
